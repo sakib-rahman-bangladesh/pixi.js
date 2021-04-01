@@ -172,6 +172,7 @@ export enum DRAW_MODES {
 export enum FORMATS {
     RGBA = 6408,
     RGB = 6407,
+    RED = 6403,
     ALPHA = 6406,
     LUMINANCE = 6409,
     LUMINANCE_ALPHA = 6410,
@@ -231,6 +232,24 @@ export enum TYPES {
     UNSIGNED_SHORT_5_5_5_1 = 32820,
     FLOAT = 5126,
     HALF_FLOAT = 36193,
+}
+
+/**
+ * Various sampler types. Correspond to `sampler`, `isampler`, `usampler` GLSL types respectively.
+ * WebGL1 works only with FLOAT.
+ *
+ * @memberof PIXI
+ * @static
+ * @name SAMPLER_TYPES
+ * @enum {number}
+ * @property {number} FLOAT=0
+ * @property {number} INT=1
+ * @property {number} UINT=2
+ */
+export enum SAMPLER_TYPES {
+    FLOAT = 0,
+    INT = 1,
+    UINT = 2,
 }
 
 /**
@@ -435,4 +454,24 @@ export enum MSAA_QUALITY {
     LOW = 2,
     MEDIUM = 4,
     HIGH = 8
+}
+
+/**
+ * Constants for various buffer types in Pixi
+ *
+ * @see PIXI.BUFFER_TYPE
+ *
+ * @name BUFFER_TYPE
+ * @memberof PIXI
+ * @static
+ * @enum {number}
+ * @property {number} ELEMENT_ARRAY_BUFFER - buffer type for using as an index buffer
+ * @property {number} ARRAY_BUFFER - buffer type for using attribute data
+ * @property {number} UNIFORM_BUFFER - the buffer type is for uniform buffer objects
+ */
+export enum BUFFER_TYPE {
+    ELEMENT_ARRAY_BUFFER = 34963,
+    ARRAY_BUFFER = 34962,
+    // NOT YET SUPPORTED
+    UNIFORM_BUFFER = 35345,
 }
